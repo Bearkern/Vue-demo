@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- <h1 id="title">Title</h1>
+        <div class="num">{{score * 0.8}}</div>
+        <input type="text" v-model="message">
+        <div class="hi">
+            {{message * 0.25}}<br>
+            {{message * 30}}<br>
+        </div>
+        <div v-show="show">我是訊息</div>
+
+        <input type="text" v-model="score">
+        <div v-if="score>=60">很棒！你及格了。</div>
+        <div v-else="score<60">不及格！</div>
+        <ul class="list" >
+            <li v-for="color in colors">
+                {{color}}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="member in home" v-on:click="myFa(member.father)">
+                {{member.father}}
+            </li>
+        </ul> -->
+
+        <!-- Todolist -->
+        <input type="text" placeholder="請輸入代辦事項"
+                @keyup.enter="addTodo(newTodo)" v-model="newTodo">
+        <h2>事項列表</h2>
+        <ul>
+            <li v-for="todo in todos" v-bind:class="{ active: todo.completed }">
+                <input type="checkbox" v-model="todo.completed">
+                {{todo.content}}
+                - <a href="#" @click.prevent="removeTodo(todo)">刪除</a>
+            </li>
+        </ul>
+        <pre>{{this.todos}}</pre>
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
