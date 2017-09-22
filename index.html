@@ -9,6 +9,14 @@
 </head>
 <body>
     <div id="app">
+
+    <h2>All my Repositories</h1>
+
+    <ul>
+        <li v-for="repo in repositories">
+            <a :href="repo.html_url" target="_blank">{{repo.name}}</a>
+        </li>
+    </ul>
         <!-- <h1 id="title">Title</h1>
         <div class="num">{{score * 0.8}}</div>
         <input type="text" v-model="message">
